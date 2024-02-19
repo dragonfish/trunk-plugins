@@ -18,7 +18,8 @@ else
 fi
 
 # Check if MODULE.bazel.lock has been modified
-if git diff --name-only | grep -q "MODULE.bazel.lock"; then
+diff=$(git diff --name-only)
+if echo "${diff}" | grep -q "MODULE.bazel.lock"; then
   echo "MODULE.bazel.lock has been modified"
   read -r -p "Do you want to commit the file? (yes/no): " response
   if [[ ${response} == "Yes" || ${response} == "yes" || ${response} == "Y" || ${response} == "y" ]]; then
