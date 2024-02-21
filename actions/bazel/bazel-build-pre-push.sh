@@ -8,6 +8,7 @@ else
   while true; do
     read -r trash
     echo $trash
+    sleep 1000
   done
   echo "Bazel build failed. Do you want to continue? (yes/no): "
   read -r response
