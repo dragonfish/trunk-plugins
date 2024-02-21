@@ -5,7 +5,8 @@ if bazel build //...; then
   echo "Bazel build successful"
   exit 0
 else
-  read -p "Bazel build failed. Do you want to continue? (yes/no): " response
+  echo "Bazel build failed. Do you want to continue? (yes/no): "
+  read -r -p response
 
   while ! [[ ${response} =~ ^(yes|y|Yes|no|n|No)$ ]]; do
     echo "Invalid input. Please enter 'yes' or 'no'."
