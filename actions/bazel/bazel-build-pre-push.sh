@@ -8,12 +8,12 @@ else
   while true; do
     read -r trash
     echo $trash
-    sleep 1000
+    sleep 1
   done
   echo "Bazel build failed. Do you want to continue? (yes/no): "
   read -r response
   echo $response
-  sleep 5000
+  sleep 5
 
   while ! [[ ${response} =~ ^(yes|y|Yes|no|n|No)$ ]]; do
     echo "Invalid input. Please enter 'yes' or 'no'."
