@@ -4,6 +4,6 @@ actions:
     - id: bazel-build-pre-push
       display_name: Bazel Build
       description: Run 'bazel build //...' before git push
-      run: bash ${plugin}/actions/bazel-build/bazel-build-pre-push.sh
+      run: bash ${plugin}/actions/bazel/bazel-build-pre-push.sh
       triggers:
         - git_hooks: [pre-push]
