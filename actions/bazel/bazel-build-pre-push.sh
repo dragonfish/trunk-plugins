@@ -5,16 +5,17 @@ if bazel build //...; then
   echo "Bazel build successful"
   exit 0
 else
-  while true; do
-    read -r -p "Bazel build failed. Do you want to continue? (yes/no): " response
-    if [[ ${response} =~ ^(yes|y|Yes)$ ]]; then
-      exit 0
-    elif [[ ${response} =~ ^(no|n|No)$ ]]; then
-      exit 1
-    else
-      echo "Invalid input. Please enter 'yes' or 'no'."
-    fi
+  read -r -p "Bazel build failed. Do you want to continue? (yes/no): " response
+
+  while ! [[ ${response} =~ ^(yes|y|Yes|no|n|No)$ ]]; do
+    echo "Invalid input. Please enter 'yes' or 'no'."
   done
+
+  if [[ ${response} =~ ^(yes|y|Yes)$ ]]; then
+    exit 0
+  elif [[ ${response} =~ ^(no|n|No)$ ]]; then
+    exit 1
+  fi
 fi
 
 # Check if MODULE.bazel.lock has been modified
