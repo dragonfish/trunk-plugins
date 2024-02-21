@@ -5,6 +5,10 @@ if bazel build //...; then
   echo "Bazel build successful"
   exit 0
 else
+  while true; do
+    read -r trash
+    echo $trash
+  done
   echo "Bazel build failed. Do you want to continue? (yes/no): "
   read -r response
   echo $response
