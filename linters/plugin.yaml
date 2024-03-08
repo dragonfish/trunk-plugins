@@ -412,6 +412,12 @@ lint:
       extensions:
         - png
 
+    - name: powershell
+      extensions:
+        - ps1
+        - psm1
+        - psd1
+
     - name: prettier_supported_configs
       filenames:
         - .prettierrc
@@ -444,6 +450,12 @@ lint:
     - name: python-interface
       extensions:
         - pyi
+      comments:
+        - hash
+
+    - name: rego
+      extensions:
+        - rego
       comments:
         - hash
 
