@@ -215,7 +215,7 @@ trunk actions enable {action}
 | [`npm-check`](actions/npm-check/README.md)                                                                                                                                       | check whether NPM installation is up to date               |
 | [`poetry-check`](actions/poetry/README.md), [`poetry-lock`](actions/poetry/README.md), [`poetry-export`](actions/poetry/README.md), [`poetry-install`](actions/poetry/README.md) | hooks to enforce poetry configuration                      |
 | [`yarn-check`](actions/yarn-check/README.md)                                                                                                                                     | check whether Yarn installation is up to date              |
-| [`bazel-build-pre-push`](actions/bazel/README.md)                    | run `bazel build //...` before `git push`                  |
+| [`bazel-build-pre-push`](actions/bazel/README.md)                                                                                                                                | run `bazel build //...` before `git push`                  |
 
 ### Supported Tools
 
