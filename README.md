@@ -70,7 +70,7 @@ trunk check enable {linter}
 | Nix             | [nixpkgs-fmt]                                                                                                        |
 | package.json    | [sort-package-json]                                                                                                  |
 | Perl            | [perlcritic], [perltidy]                                                                                             |
-| PHP             | [phpstan]                                                                                                            |
+| PHP             | [php-cs-fixer], [phpstan]                                                                                            |
 | PNG             | [oxipng]                                                                                                             |
 | PowerShell      | [psscriptanalyzer]                                                                                                   |
 | Prisma          | [prisma]                                                                                                             |
@@ -118,7 +118,7 @@ trunk check enable {linter}
 [dotenv-linter]: https://github.com/dotenv-linter/dotenv-linter#readme
 [dotnet-format]: https://github.com/dotnet/format#readme
 [dustilock]: https://github.com/Checkmarx/dustilock
-[eslint]: https://github.com/eslint/eslint#readme
+[eslint]: https://eslint.org/docs/latest/
 [flake8]: https://trunk.io/linters/python/flake8
 [git-diff-check]: https://git-scm.com/docs/git-diff
 [gitleaks]: https://trunk.io/linters/security/gitleaks
@@ -147,6 +147,7 @@ trunk check enable {linter}
 [oxipng]: https://github.com/shssoichiro/oxipng#readme
 [perlcritic]: https://metacpan.org/pod/Perl::Critic
 [perltidy]: https://metacpan.org/dist/Perl-Tidy/view/bin/perltidy
+[php-cs-fixer]: https://github.com/PHP-CS-Fixer/PHP-CS-Fixer#readme
 [phpstan]: https://phpstan.org/
 [pmd]: https://pmd.github.io/
 [pragma-once]: linters/pragma-once/README.md
